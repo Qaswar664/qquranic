@@ -1,0 +1,33 @@
+.aboutus-section {
+  margin-top: 10rem;
+}
+@media (max-width: 992px){
+  .aboutus-section{
+    margin-top: 65rem;
+     
+  }
+}
+
+
+.aboutus-section .title {
+  color: var(--primary-color);
+}
+.aboutus-section .heading {
+  color: var(--fancy-color);
+}
+
+.aboutus-section .description {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.aboutus-section-rightside-img {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.aboutus-section img {
+  width: 100%;
+  height: 400px;
+}

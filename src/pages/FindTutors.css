@@ -1,0 +1,153 @@
+.findtutor-section-1{
+    margin-top: 5rem;
+}
+
+/* page header start */
+.bg-image{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .page-header-title{
+    background-color: transparent;
+  }
+  .page-header-text{
+    background-color: transparent;
+    font-size: 50px;
+    color: var(--text-color);
+  }
+  /* page header end */
+
+  
+.findtutor-section-1 .col-3{
+    width: 100%;
+}
+
+.findtutor-section-1 .row{
+    justify-content: space-between;
+}
+  .findtutor-section-1 .title {
+    color: var(--primary-color);
+  }
+  .findtutor-section-1 .heading {
+    color: var(--fancy-color);
+  }
+  
+  .findtutor-section-1 .description {
+    color: var(--text-color);
+    font-size: 15px;
+  }
+  .findtutor-section-1 img {
+    width: 100%;
+    height: 300px;
+  }
+
+  
+  .findtutor-button .btn-findtutor{
+    color: var(--primary-color);
+    background-color: transparent;
+    font-size: 1.6rem;
+  }
+  
+  .findtutor-button .btn-findtutor-border{
+    border-radius: 3rem;
+    border: 0.1rem solid var(--primary-color);
+    box-shadow: 0 0.2rem 0.5rem rgba(102, 20, 7, 0.5);
+  }
+  
+  .findtutor-button .btn-findtutor:hover {
+    color: #fff;
+    border: 0.1rem solid var(--primary-color);
+    background-color: var(--primary-color);
+  }
+  
+
+  .findtutor-section-2{
+      margin-top: 8rem;
+  }
+  .findtutor-section-2 .main-heading {
+    margin: 3rem 0;
+  }
+  .findtutor-section-2 .sub-heading {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    color: var(--fancy-color);
+  }
+  
+.CardsMainDiv{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.card{
+    
+    width: 300px;
+    border-radius: 10px;
+    height: 400px;
+    padding: 10px;
+    margin: 20px;
+    transition: transform .2s;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+.card div{
+    background-color: white;
+}
+.card h5{
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+}
+.card td{
+    background-color: white;
+    padding: 10px;
+}
+.card p{
+    background-color: white;
+}
+.CardsMainDiv img{
+    width: 100px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 600px){
+    .card{
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        padding: 10px;
+        margin: 20px;
+        line-height: 5rem;
+    }
+    .card td{
+        background-color: white;
+        padding: 3px;
+    }
+}
+
+@media (max-width: 740px){
+  .findtutore-rightside{
+    margin-top: 10rem;
+
+  }
+}
+
+@media (max-width: 740px){
+  .CardsMainDiv{
+    margin-top: 10rem;
+
+  }
+}
+

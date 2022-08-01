@@ -1,0 +1,151 @@
+header{
+  height: 650px;
+  /* background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg'); */
+  background-color:  #ce2020;
+  background-image: url("../assets/bg-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-section{
+  margin-top: -11rem;
+ 
+}
+
+.header-container {
+  background-color: transparent;
+}
+.header-left-side{
+  margin-top: 7rem;
+}
+.header-right-side{
+  margin-top: 14rem;
+}
+
+.header-container h1 {
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.display-2{
+  color: #fff;
+}
+
+.main-hero-para {
+  font-size: 1.5rem;
+  color: rgb(232, 228, 228);
+  margin: 3rem 0 5rem 0;
+  font-weight: lighter;
+  width: 100%;
+}
+
+.header-container h3 {
+  font-weight: lighter;
+}
+.header-btn-title{
+  color: #fff;
+}
+
+.two-btn {
+  margin-top: 400px;
+}
+
+.two-btn button {
+  position: relative;
+  justify-content: space-between;
+  margin-inline-start: 1rem;
+  border-radius: 5px;
+}
+.btn-style1{
+  padding: 8px;
+  border-color: #fff;
+  color: var(--text-color);
+}
+
+.header-section .btn-style2{
+  padding: 8px;
+  
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.btn-style2:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+.btn-style3{
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.btn-style3:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+
+/* right side of hero section  */
+
+
+.form-row{
+  line-height: 3rem;
+  float: right;
+}
+.header-section .rounded{
+  border-radius: 0.75rem!important;
+}
+
+
+.form-row,
+.form-rows,
+.form-label,
+.form-control,
+.form-select{
+background-color: white;
+}
+.bg-body{
+  background-color: var(--bgcolor);
+}
+.form-label{
+  font-size: 16px;
+}
+.form-control{
+  line-height: 4.0;
+}
+.form-select{
+  line-height: 4.0;
+}
+
+@media (min-width: 992px){
+  .form-row{
+    width: 70%;
+    margin-top: 12rem;
+    margin-left: 100px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px){
+  .form-row{
+    margin-top: 6rem;
+    margin-left: 0px;
+    margin-right: 0px;  
+  }
+}
+
+@media (max-width: 992px){
+  .header-left-side{
+    margin-top: 14rem;
+     
+  }
+}
+
+
