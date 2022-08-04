@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import { NavDropdown } from "react-bootstrap";
 import "./Navbar.css";
 import { useHistory } from "react-router-dom";
-import { UserContext } from "../App";
 import menulogo from "../assets/menu-logo1.png";
 
 const Navbar = () => {
@@ -30,11 +29,11 @@ const Navbar = () => {
             Fee & Plans
           </NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink className="nav-link" to="/qaida">
             Read
           </NavLink>
-        </li>
+        </li> */}
         <li className="nav-item">
           <NavLink className="nav-link" to="/aboutus">
             About Us
@@ -71,13 +70,6 @@ const Navbar = () => {
             >
               Register
             </button>
-            {/* <button
-              className="btn  btn-style btn-style-border"
-              type="submit"
-              onClick={() => history.push("/signin")}
-            >
-              Log in
-            </button> */}
           </form>
         </li>
       </>

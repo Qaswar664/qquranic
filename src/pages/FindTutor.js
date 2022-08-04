@@ -81,6 +81,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
@@ -106,6 +107,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
@@ -131,6 +133,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
@@ -156,6 +159,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
@@ -181,6 +185,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
@@ -206,6 +211,7 @@ const FindTutor = () => {
               <img
                 className="card-img-top"
                 src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
               />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>

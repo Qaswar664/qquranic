@@ -1,7 +1,7 @@
 header{
   height: 650px;
   /* background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg'); */
-  background-color:  #ce2020;
+  background-color:  #2d9c6a;
   background-image: url("../assets/bg-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +58,7 @@ header{
 .btn-style1{
   padding: 8px;
   border-color: #fff;
-  color: var(--text-color);
+  color: white;
 }
 
 .header-section .btn-style2{
@@ -70,10 +70,10 @@ header{
   text-transform: capitalize;
   font-size: 1.6rem;
 }
-.btn-style2:hover {
-  border: 0.1rem solid var(--primary-color);
+.header-section .btn-style2:hover {
+  border: 0.1rem solid white;
   background-color: transparent;
-  color: var(--primary-color);
+  color: white;
   box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
 }
 .btn-style3{

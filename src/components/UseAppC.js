@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UseAppC.css";
 import useAppApi from "../API/useAppApi.js";
 import { NavLink } from "react-router-dom";
-import mobileapp from "../assets/mobile-app.png";
+import mobileapp from "../assets/mobile-app2.png";
 
 const UseAppC = () => {
   const [aboutData] = useState(useAppApi);
@@ -11,14 +11,14 @@ const UseAppC = () => {
       <section className="useapp-section">
         <div className="container mb-5 useapp-container">
           <div className="row ">
-            <div className="col-12 col-lg-5 text-center useapp-section-leftside-img">
-              <img src={mobileapp} alt="mobile-app-image" />
+            <div className="col-12 col-lg-6 text-center useapp-section-leftside-img">
+              <img src={mobileapp} alt="mobile-app" />
             </div>
 
-            <div className="col-12 col-lg-7 useapp-section-rightside d-flex justify-content-center align-items-start flex-column">
+            <div className="col-12 col-lg-6 useapp-section-rightside d-flex justify-content-center align-items-start flex-column">
               <h2 className="mini-title">Quran Tutor App</h2>
-              <h3 className="main-heading">
-                Alert: Our is in under development!
+              <h3 className="main-heading alert">
+                Alert: Our App is in under development!
               </h3>
               <p className="mini-para">
                 We are currently developing our mobileapp so people and kids can

@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutusC.css";
-import bgimage from "../assets/bgimage.jpeg";
+import aboutusImg from "../assets/aboutus-img.png";
 
 const AboutusC = () => {
   return (
@@ -9,16 +9,12 @@ const AboutusC = () => {
         <div className="container mb-5 aboutus-container">
           <div className="row">
             {/* images section  right side*/}
-            <div className="col-12 col-lg-5 text-center  aboutus-section-rightside-img">
-              <img
-                src="./images/aboutsection.png"
-                alt="aboutusImg"
-                className="about-img"
-              />
+            <div className="col-12 col-lg-6 text-center  aboutus-section-rightside-img">
+              <img src={aboutusImg} alt="aboutusImg" className="about-img" />
             </div>
 
             {/* 1section left side data  */}
-            <div className="col-12 col-lg-7 d-flex justify-content-center align-items-start flex-column aboutus-section-lefttside">
+            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-start flex-column aboutus-section-lefttside">
               <h1 className="title">About Q Quranic</h1>
               <h3 className="heading">A Brief Summary</h3>
               <p className="description">
@@ -28,11 +24,6 @@ const AboutusC = () => {
                 types of Islamic courses. So, everyone can choose their desire
                 course and start learning the course.
               </p>
-
-              {/* <br />
-              <button className="btn-style btn-style-border aboutus-section-button">
-                About Us
-              </button> */}
             </div>
           </div>
         </div>

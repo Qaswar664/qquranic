@@ -98,7 +98,11 @@
   box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
 }
 
-
+@media (max-width: 362px){
+.button-row button {
+  margin-top: 20px;
+}
+}
 
 @media (min-width: 992px){
 .course-container .col-lg-4 {
@@ -112,7 +116,7 @@
   border-radius: 10px;
   margin: 20px 0px;
   background-color: #fff;
-  padding: 25px;
+  padding: 20px;
 }
 
 .courses-container-subdiv:hover {
@@ -141,6 +145,13 @@ align-items: center;
 .course-section-2 .courses-container-subdiv .fontawesome-style {
   text-align: left;
   margin: 2rem 0;
+}
+@media (max-width: 386px) {
+.course-section-2 .button-row {
+  display: block;
+  justify-content: space-between;
+  background-color: transparent;
+}
 }
 
 @media (min-width: 1400px) {

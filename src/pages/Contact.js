@@ -118,13 +118,13 @@ const Contact = () => {
                       </i>
                     </div> */}
                   </div>
-                  <figure className="image-div flex start">
+                  {/* <figure className="image-div flex start">
                     <img
                       src={contactus}
                       alt="contatUsImg"
                       className="img-fluid"
                     />
-                  </figure>
+                  </figure> */}
                 </div>
 
                 {/* right side contact form  */}
@@ -214,8 +214,8 @@ const Contact = () => {
                         id="flexCheckChecked"
                       />
                       <label className="form-check-label main-hero-para">
-                        I agree that the thapatechnicalpay may contact me at the
-                        email address or phone number above
+                        I agree that the Q Quranic may contact me at the email
+                        address or phone number I provide.
                       </label>
                     </div>
                     <h4 className="text-danger text-center">{response}</h4>

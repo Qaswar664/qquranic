@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Error404.css";
-import Error404 from "../components/Error404";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import headerbg from "../assets/headerbg.webp";

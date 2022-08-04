@@ -7,7 +7,6 @@ import HowItWorks from "./pages/HowItWorks";
 import Quran from "./pages/Quran";
 import Qaida from "./pages/Qaida";
 import Aboutus from "./pages/Aboutus";
-import Aboutme from "./pages/Aboutme";
 import Contact from "./pages/Contact";
 import Courses from "./pages/Courses";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -16,9 +15,7 @@ import Testimonials from "./pages/Testimonials";
 import FaQ from "./pages/FaQ";
 import WhyUS from "./pages/WhyUs";
 import UseApp from "./pages/UseApp";
-import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import Logout from "./components/Logout";
 import Error from "./pages/Error";
 
 import { initialState, reducer } from "./reducer/UseReducer";
@@ -38,7 +35,6 @@ const App = () => {
           <Route path="/quran" component={Quran}></Route>
           <Route path="/qaida" component={Qaida}></Route>
           <Route path="/aboutus" component={Aboutus}></Route>
-          <Route path="/aboutme" component={Aboutme}></Route>
           <Route path="/contact" component={Contact}></Route>
           <Route path="/courses" component={Courses}></Route>
           <Route path="/privacypolicy" component={PrivacyPolicy}></Route>
@@ -47,9 +43,7 @@ const App = () => {
           <Route path="/whyus" component={WhyUS}></Route>
           <Route path="/faqs" component={FaQ}></Route>
           <Route path="/useapp" component={UseApp}></Route>
-          <Route path="/signin" component={Signin}></Route>
           <Route path="/signup" component={Signup}></Route>
-          <Route path="/logout" component={Logout}></Route>
           <Route component={Error}></Route>
         </Switch>
       </UserContext.Provider>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UseApp.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -18,7 +18,9 @@ const UseApp = () => {
         >
           <div className="d-flex page-header-title justify-content-center align-items-center h-100">
             <div className="page-header-text">
-              <h1 className="mb-3 page-header-text">Why Choose Q Quranic</h1>
+              <h1 className="mb-3 page-header-text">
+                How to use Q Quranic App?
+              </h1>
             </div>
           </div>
         </div>{" "}

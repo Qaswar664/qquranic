@@ -4,7 +4,6 @@ import "./PrivacyPolicy.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import headerbg from "../assets/bg-1.jpeg";
-import { NavLink } from "react-router-dom";
 
 const PrivacyP = () => {
   return (

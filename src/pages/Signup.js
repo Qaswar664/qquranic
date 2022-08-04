@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import "./Signup.css";
 import axios from "../API/axios.js";
 import Navbar from "../components/Navbar";
@@ -9,8 +8,6 @@ import signup from "../assets/signup.webp";
 import validator from "validator";
 
 const Signup = () => {
-  const history = useHistory();
-
   const [user, setUser] = useState({
     name: "",
     email: "",

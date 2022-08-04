@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer>
-        <hr className="hr-footer-top" />
+      <footer className="footer-section">
+        {/* <hr className="hr-footer-top" /> */}
 
         <div className="container">
           <div className="row3">
@@ -73,9 +73,9 @@ const Footer = () => {
                     {/* <li>
                       <NavLink to="/quran">Read Quran</NavLink>
                     </li> */}
-                    <li>
+                    {/* <li>
                       <NavLink to="/qaida">Read Qaida</NavLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
 
@@ -110,11 +110,6 @@ const Footer = () => {
                   </div>
 
                   <div className="row2">
-                    {/* <div className="col-12 mx-auto img1">
-                      <a href="/">
-                        <img src="./images/appstore.png" alt="App Store" />
-                      </a>
-                    </div> */}
                     <div className="col-12 mx-auto img2">
                       <a href="/">
                         <img
@@ -138,7 +133,11 @@ const Footer = () => {
                 </div>
                 <div className=" flex-end">
                   <p className="copyright-made">
-                    Made ♥️ By <a href="https://crudics.com">crudics</a>
+                    Made with{" "}
+                    <span role="img" aria-label="heart">
+                      ♥️
+                    </span>{" "}
+                    By <a href="https://crudics.com">crudics</a>
                   </p>
                 </div>
               </div>

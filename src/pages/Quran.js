@@ -2,7 +2,6 @@ import React from "react";
 import "./PageHeader.css";
 import "./QuranReading.css";
 import Navbar from "../components/Navbar";
-import QuranReading from "../components/QuranReading";
 import Footer from "../components/Footer";
 import headerbg from "../assets/headerbg.webp";
 

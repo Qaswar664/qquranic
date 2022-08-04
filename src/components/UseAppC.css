@@ -18,11 +18,9 @@
 
 .useapp-section img {
   width: 100%;
-  height: 500px;
+  height: auto;
   margin: 0rem;
   margin-top: 5rem;
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.8rem 0.8rem; */
-  /* border-radius: 1.5rem; */
 }
 
 .useapp-section .mini-title {
@@ -35,6 +33,10 @@
 
 .useapp-section .main-heading {
   font-weight: normal;
+  
+}
+.alert{
+  color: red  ;
 }
 
 .useapp-section-info {

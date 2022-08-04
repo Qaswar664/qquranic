@@ -92,9 +92,9 @@ const Course = () => {
                       <button className="btn ">
                         <NavLink
                           className="btn-style1 p-3 btn-howitworks-border"
-                          to="#"
+                          to="/findtutors"
                         >
-                          Course Detail
+                          Find Tutor
                         </NavLink>
                       </button>
                       <button className="btn ">
