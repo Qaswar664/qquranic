@@ -12,8 +12,8 @@ const useAppApi = [
   },
   {
     id: 3,
-    title: "Read Qaida",
-    info: "We provide secure payment method to transfer payments.",
+    title: "Start Learning",
+    info: "We provide professional tutors only.",
   },
 ];
 

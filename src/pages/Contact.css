@@ -1,15 +1,11 @@
 
-.contactus-section {
-  margin: 5rem 0;
-}
+
 .contact-list{
   margin-top: 5rem;
   display: grid;
   line-height: 4rem;
 }
-/* .contact-heading{
-  font-size: ;
-} */
+
 .contact-item{
   display: flex;
   align-items: center;
@@ -69,4 +65,18 @@
   }
 }
 
-
+.contactP-btn {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.contactP-btn:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(1, 1, 1, 0.5);
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Signup.css";
 import axios from "../API/axios.js";
 import Navbar from "../components/Navbar";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import Footer from "../components/Footer";
 import signup from "../assets/signup.webp";
 import validator from "validator";
@@ -12,8 +12,8 @@ const Signup = () => {
     name: "",
     email: "",
     phone: "",
-    // course: "",
-    // country: "",
+    course: "",
+    country: "",
   });
 
   const handleChange = (e) => {
@@ -26,8 +26,8 @@ const Signup = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const { name, email, phone } = user;
-    if (!name || !email || !phone) {
+    const { name, email, phone, course, country } = user;
+    if (name && email && phone && course && country) {
       alert("Fill all fields correctly!");
     }
     if (!validator.isEmail(email)) {
@@ -59,12 +59,13 @@ const Signup = () => {
         </div>{" "}
       </div>
       {/* page header end */}
+      {/* left side start- sign up page */}
       <section className="signup-section">
         <div className="container signup-container">
           <div className="row">
             <div className="col-12 col-lg-12 mx-auto">
               <div className="row">
-                <div className="signup-leftside col-12 col-lg-5">
+                <div className="signup-leftside col-12 col-lg-6">
                   <h1 className="main-heading fw-bold">
                     New Here <br />
                   </h1>
@@ -79,12 +80,13 @@ const Signup = () => {
                     <img src={signup} alt="contatUsImg" className="img-fluid" />
                   </figure>
                 </div>
+                {/* left side end- sign up page */}
 
-                {/* right side contact form  */}
-                <div className="signup-rightside col-12 col-lg-7">
+                {/* right side sign up page - contact form  */}
+                <div className="signup-rightside col-12 col-lg-6">
                   <form method="POST">
                     <div className="row">
-                      <h1>Registeration Form:</h1>
+                      <h1>Student Registeration Form:</h1>
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <input
                           type="text"
@@ -118,12 +120,12 @@ const Signup = () => {
                           id="phone"
                           autoComplete="off"
                           className="form-control"
-                          placeholder="WhatsApp Number "
+                          placeholder="WhatsApp number with country code"
                           value={user.phone}
                           onChange={handleChange}
                         />
                       </div>
-                      {/* <div className="col-12 col-lg-6 signup-input-feild">
+                      <div className="col-12 col-lg-6 signup-input-feild">
                         <select
                           name="course"
                           id="course"
@@ -139,10 +141,10 @@ const Signup = () => {
                           <option>Quran Tafseer</option>
                           <option>Namaz, Kalma, Dua</option>
                         </select>
-                      </div> */}
+                      </div>
                     </div>
                     <div className="row">
-                      {/* <div className="col-12 signup-input-feild">
+                      <div className="col-12 col-lg-6 signup-input-feild">
                         <input
                           type="text"
                           name="country"
@@ -153,12 +155,12 @@ const Signup = () => {
                           value={user.country}
                           onChange={handleChange}
                         />
-                      </div> */}
+                      </div>
                     </div>
 
                     <button
                       type="submit"
-                      className="btn btn-style w-100 mt-5"
+                      className="btn registerP-btn w-100 mt-5"
                       onClick={submitHandler}
                     >
                       Register

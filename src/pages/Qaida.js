@@ -2,7 +2,7 @@ import React from "react";
 import "./PageHeader.css";
 import "./QaidaReading.css";
 import Navbar from "../components/Navbar";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import Footer from "../components/Footer";
 
 const Qaida = () => {

@@ -10,8 +10,8 @@ const HowItWorks = () => {
     <>
       <section className="howitworks-section">
         <div className="container work-container ">
-          <h1 className="main-heading text-center"> How It Works?</h1>
-          <h3 className="sub-heading text-center"> 3 easy steps to start</h3>
+          <h1 className="main-heading text-left"> How It Works?</h1>
+          <h3 className="sub-heading text-left"> 3 easy steps to start</h3>
           <div className="row">
             {workData.map((curElem) => {
               const { logo, title, info } = curElem;

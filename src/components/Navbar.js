@@ -50,7 +50,7 @@ const Navbar = () => {
             FAQs
           </NavLink>
         </li>
-        {/* <li className="nav-item">
+        <li className="nav-item">
           <NavLink className="nav-link" to="/whyus">
             Why Us
           </NavLink>
@@ -59,12 +59,12 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/howitworks">
             How
           </NavLink>
-        </li> */}
+        </li>
 
         <li className="nav-item">
           <form className="d-flex register-button">
             <button
-              className="btn  btn-style"
+              className="btn  nav-btn-style"
               type="submit"
               onClick={() => history.push("/signup")}
             >

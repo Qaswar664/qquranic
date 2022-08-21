@@ -5,7 +5,7 @@ import faqs from "../assets/faqs.png";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 
 const FaQ = () => {
   return (

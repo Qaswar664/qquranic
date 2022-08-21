@@ -1,17 +1,4 @@
 
-.useapp-section {
-  margin-top: 10rem;
-}
-@media (max-width: 992px){
-  .useapp-section {
-    margin-top: 0rem;
-  }
-}
-
-.useapp-container {
-  width: 90%;
-}
-
 .useapp-section .mini-para {
   font-size: 15px;
 }
@@ -101,4 +88,9 @@
   color: #fff;
   border: 0.1rem solid var(--primary-color);
   background-color: var(--primary-color);
+}
+@media (max-width: 992px){
+  .useapp-section {
+    margin-top: 0rem;
+  }
 }

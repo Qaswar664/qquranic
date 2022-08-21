@@ -3,7 +3,7 @@ import "./PageHeader.css";
 import "./PrivacyPolicy.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 
 const PrivacyP = () => {
   return (
@@ -27,7 +27,7 @@ const PrivacyP = () => {
       {/* page header end */}
       <section className="policy-section">
         <div className="container justify-content-center">
-          <h1 className="main-heading text-center fw-bold">
+          <h1 className="main-heading text-left fw-bold">
             <u> Privacy Policy</u>
           </h1>
 

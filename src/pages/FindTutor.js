@@ -2,7 +2,7 @@ import React from "react";
 import "./FindTutors.css";
 import Navbar from "../components/Navbar";
 import { NavLink } from "react-router-dom";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import tutors from "../assets/tutors.svg";
 import Footer from "../components/Footer";
 
@@ -70,13 +70,13 @@ const FindTutor = () => {
 
       <section className="findtutor-section-2">
         <div className="container">
-          <h1 className="main-heading text-center fw-bold">
+          <h1 className="main-heading text-left fw-bold">
             Professional Tutors In A List
           </h1>
-          <h3 className="sub-heading text-center">
+          <h3 className="sub-heading text-left">
             To choose any tutor, contact us to start with choosen tutor.
           </h3>
-          <div className="CardsMainDiv">
+          <div className="CardsMainDiv ">
             <div className="card">
               <img
                 className="card-img-top"
@@ -84,10 +84,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Qari Abdullah</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Qari</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -95,12 +95,18 @@ const FindTutor = () => {
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>5 Year</td>
+                  <td>3 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
             <div className="card">
@@ -110,10 +116,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Hafiz Ahmad</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Hafiz</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -123,10 +129,16 @@ const FindTutor = () => {
                   <td>Experience:</td>
                   <td>5 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
             <div className="card">
@@ -136,10 +148,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Muhammad Farooq</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Mufti</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -147,12 +159,18 @@ const FindTutor = () => {
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>5 Year</td>
+                  <td>4 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
             <div className="card">
@@ -162,10 +180,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Muhammad Asif</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Tafseer</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -175,10 +193,16 @@ const FindTutor = () => {
                   <td>Experience:</td>
                   <td>5 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
             <div className="card">
@@ -188,10 +212,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Qaria Ayesha</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Qaria, Alima</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -199,12 +223,18 @@ const FindTutor = () => {
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>5 Year</td>
+                  <td>7 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
             <div className="card">
@@ -214,10 +244,10 @@ const FindTutor = () => {
                 alt="img here"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Hafiza Nafisa</h5>
                 <tr>
                   <td>Education:</td>
-                  <td>BSIT</td>
+                  <td>Hafiza</td>
                 </tr>
                 <tr>
                   <td>Status:</td>
@@ -225,12 +255,18 @@ const FindTutor = () => {
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>5 Year</td>
+                  <td>3 Year</td>
                 </tr>
-                <tr>
-                  <td>Whatsapp:</td>
-                  <td>+923040070085</td>
-                </tr>
+                <div>
+                  <button className="btn w-100">
+                    <a
+                      href="https://wa.link/p18hhb"
+                      className="btn tutor-btn w-100"
+                    >
+                      WhatsApp
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

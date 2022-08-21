@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./WhyUs.css";
 import whyUsApi from "../API/whyUsApi.js";
 import { NavLink } from "react-router-dom";
-import whyusimg from "../assets/whyus.png";
+import whyusimg from "../assets/whyus-rm.png";
 
 const WhyUs = () => {
   const [aboutData] = useState(whyUsApi);

@@ -1,8 +1,4 @@
-.howitworks-section{
-  margin-top: 10rem;
-  background-color: white;
-  /* background: linear-gradient(to right,#ffffff, #f1f5f1); */
-}
+
 .howitworks-section .col-3{
   width: 100%;
 }
@@ -83,7 +79,6 @@
 .work-container .main-heading {
   font-size: 3rem;
   font-weight: bolder;
-  margin-bottom: 3rem;
   word-spacing: 1rem;
 }
 .work-container .sub-heading {

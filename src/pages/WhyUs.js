@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import Numbers from "../components/Numbers";
 import Footer from "../components/Footer";
 import whyUsApi from "../API/whyUsApi.js";
-import headerbg from "../assets/bg-1.jpeg";
-import whyus from "../assets/whyus.png";
+import headerbg from "../assets/bg-2.png";
+import whyus from "../assets/whyus-rm.png";
 const WhyUs = () => {
   const [aboutData] = useState(whyUsApi);
   return (
@@ -31,7 +31,7 @@ const WhyUs = () => {
         <div className="container mb-5 whyus-container">
           <div className="row">
             {/* 1section leftt side data  */}
-            <div className="col-12 col-lg-7 d-flex justify-content-center align-items-start flex-column  whyus-section-lefttside">
+            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-start flex-column  whyus-section-lefttside">
               <h1 className="title">Why Choose Q Quranic?</h1>
               <h3 className="heading">
                 World class Services <br /> Simple, Reliable, Secure
@@ -51,15 +51,10 @@ const WhyUs = () => {
                   </>
                 );
               })}
-
-              <br />
-              <button className="btn-style btn-style-border whyus-section-button">
-                learn more
-              </button>
             </div>
 
             {/* images section  */}
-            <div className="col-12 col-lg-5  text-center whyus-section-rightside-img">
+            <div className="col-12 col-lg-6  text-center whyus-section-rightside-img">
               <img src={whyus} alt="WhyUsImg" className="whyus-img" />
             </div>
           </div>

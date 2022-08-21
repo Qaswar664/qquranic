@@ -3,7 +3,7 @@ import "./PricePlan.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import feeplan from "../assets/feeplan.webp";
 
 const PricePlan = () => {

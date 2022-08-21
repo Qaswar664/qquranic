@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PageHeader.css";
 import "./Courses.css";
-import coursesApi from "../API/coursesApi";
 import Navbar from "../components/Navbar";
 import { NavLink } from "react-router-dom";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import Footer from "../components/Footer";
 import courses from "../assets/courses-image.png";
 
 const Course = () => {
-  const [serviceData] = useState(coursesApi);
   return (
     <>
       <Navbar />
@@ -66,50 +64,193 @@ const Course = () => {
           </div>
         </div>
       </section>
+      {/* first section end */}
 
+      {/* second section courses starts */}
       <section className="course-section-2">
-        <div className="container course-container justify-content-center">
-          <h1 className="main-heading text-center fw-bold">
+        <div className="container  justify-content-center">
+          <h1 className="main-heading text-left fw-bold">
             Different Islamic Courses
           </h1>
-          <h3 className="sub-heading text-center">
+          <h3 className="sub-heading text-left">
             To see detail of any course, just click on course name it.
           </h3>
 
-          <div className="row">
-            {serviceData.map((curElem) => {
-              const { id, logo, title, info } = curElem;
-              return (
-                <>
-                  <div
-                    className="col-11 col-lg-4 col-xxl-4 text-center courses-container-subdivP"
-                    key={id}
-                  >
-                    <i className={`course-image-p ${logo}`}></i>
-                    <h2 className="sub-heading">{title}</h2>
-                    <p className="course-description">{info}</p>
-                    <div className="button-row">
-                      <button className="btn ">
-                        <NavLink
-                          className="btn-style1 p-3 btn-howitworks-border"
-                          to="/findtutors"
-                        >
-                          Find Tutor
-                        </NavLink>
-                      </button>
-                      <button className="btn ">
-                        <NavLink
-                          className="btn-style2 p-3 btn-howitworks-border"
-                          to="/signup"
-                        >
-                          Get Trial
-                        </NavLink>
-                      </button>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
+          <div className="CardsMainDiv">
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Basic Qaida</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Quran Tajweed</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Hifz e Quran</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Quran Translation</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Quran Memorization</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="https://images.unsplash.com/photo-1576764402988-7143f9cca90a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+                alt="img here"
+              />
+              <div className="card-body">
+                <h3 className="card-title">Namaz, Kalma, Dua's</h3>
+                <tr>
+                  <p>
+                    The first step in learning the Quran is to recognize, read,
+                    and comprehend its alphabets. Madani Qaida is the primary
+                    source for learning these Arabic alphabets. Reading the
+                    Quran will be very easy for you if you have a good command
+                    of this Qaida. You could contend that this is the foundation
+                    for learning the Holy Quran.
+                  </p>
+                </tr>
+
+                <div className="card-body d-flex justify-content-between text-center">
+                  <NavLink to="#" className="course-btn1">
+                    Learn More
+                  </NavLink>
+                  <NavLink to="/signup" className="course-btn2">
+                    Enrol Now
+                  </NavLink>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

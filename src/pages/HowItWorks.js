@@ -3,7 +3,7 @@ import "./HowItWorks.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import howItWorkApi from "../API/howItWorkApi.js";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import HowItWorksC from "../components/HowItWorks";
 import UseAppC from "../components/UseAppC";
 const HowItWorks = () => {

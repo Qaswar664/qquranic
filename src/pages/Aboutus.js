@@ -4,7 +4,7 @@ import "./Aboutus.css";
 import Navbar from "../components/Navbar";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import Numbers from "../components/Numbers";
 import UseAppC from "../components/UseAppC";
 import ceoimg from "../assets/ceo.png";

@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutusC.css";
 import aboutusImg from "../assets/aboutus-img.png";
+import { NavLink } from "react-router-dom";
 
 const AboutusC = () => {
   return (
@@ -24,6 +25,15 @@ const AboutusC = () => {
                 types of Islamic courses. So, everyone can choose their desire
                 course and start learning the course.
               </p>
+              <br />
+              <button className="btn whyus-section-button">
+                <NavLink
+                  className="btn-whyus p-3 btn-whyus-border"
+                  to="/Aboutus"
+                >
+                  About Us
+                </NavLink>
+              </button>
             </div>
           </div>
         </div>

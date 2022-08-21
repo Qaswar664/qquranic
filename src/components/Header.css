@@ -1,8 +1,7 @@
 header{
   height: 650px;
-  /* background-image: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg'); */
   background-color:  #2d9c6a;
-  background-image: url("../assets/bg-1.jpeg");
+  background-image: url("../assets/bg-2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,6 +44,7 @@ header{
   color: #fff;
 }
 
+/* Call us button */
 .two-btn {
   margin-top: 400px;
 }
@@ -55,12 +55,75 @@ header{
   margin-inline-start: 1rem;
   border-radius: 5px;
 }
-.btn-style1{
+
+.btn-style1 {
+  width: 12rem;
+  height: 4rem;
   padding: 8px;
-  border-color: #fff;
   color: white;
+  border-radius: 2rem;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.6rem;
 }
 
+.btn-style1:first-child {
+  margin-right: 2rem;
+}
+
+.btn-style1:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border1 {
+  border: 0.1rem solid white;
+  background-color: transparent;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-style-border1:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+/* contact us button */
+.btn-style2 {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+
+.btn-style2:first-child {
+  margin-right: 2rem;
+}
+
+.btn-style2:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border2 {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-style-border2:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+}
 .header-section .btn-style2{
   padding: 8px;
   
@@ -76,23 +139,6 @@ header{
   color: white;
   box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
 }
-.btn-style3{
-  width: 12rem;
-  height: 4rem;
-  border-radius: 2rem;
-  color: #fff;
-  background-color: var(--primary-color);
-  text-transform: capitalize;
-  font-size: 1.6rem;
-}
-.btn-style3:hover {
-  border: 0.1rem solid var(--primary-color);
-  background-color: transparent;
-  color: var(--primary-color);
-  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
-}
-
-
 /* right side of hero section  */
 
 
@@ -123,6 +169,23 @@ background-color: white;
 }
 .form-select{
   line-height: 4.0;
+}
+/* form bujtton */
+
+.home-register-btn {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+.home-register-btn:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(1, 1, 1, 0.5);
 }
 
 @media (min-width: 992px){

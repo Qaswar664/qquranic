@@ -2,7 +2,7 @@ import React from "react";
 import "./ToS.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 
 const ToS = () => {
   return (

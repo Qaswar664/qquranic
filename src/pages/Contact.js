@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./PageHeader.css";
-import "./ContactUs.css";
+import "./Contact.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
-import contactus from "../assets/contactus.webp";
+import headerbg from "../assets/bg-2.png";
 
 const Contact = () => {
   const history = useHistory();
@@ -108,23 +107,7 @@ const Contact = () => {
                       </div>
                       <div className="contact-text">contact@qquranic.com</div>
                     </div>
-
-                    {/* <div>
-                      <i
-                        className="fa fa-whatsapp contact-icon"
-                        aria-hidden="true"
-                      >
-                        +923007575666
-                      </i>
-                    </div> */}
                   </div>
-                  {/* <figure className="image-div flex start">
-                    <img
-                      src={contactus}
-                      alt="contatUsImg"
-                      className="img-fluid"
-                    />
-                  </figure> */}
                 </div>
 
                 {/* right side contact form  */}
@@ -173,7 +156,7 @@ const Contact = () => {
                           name="email"
                           id=""
                           className="form-control"
-                          placeholder="Email ID"
+                          placeholder="Email"
                           value={userData.email}
                           onChange={postUserData}
                         />
@@ -186,7 +169,7 @@ const Contact = () => {
                           name="address"
                           id=""
                           className="form-control"
-                          placeholder="Add Address"
+                          placeholder="Address"
                           value={userData.address}
                           onChange={postUserData}
                         />
@@ -200,7 +183,7 @@ const Contact = () => {
                           name="message"
                           id=""
                           className="form-control"
-                          placeholder="Enter Your Message"
+                          placeholder="Message"
                           value={userData.message}
                           onChange={postUserData}
                         />
@@ -221,7 +204,7 @@ const Contact = () => {
                     <h4 className="text-danger text-center">{response}</h4>
                     <button
                       type="submit"
-                      className="btn btn-style w-100"
+                      className="btn contactP-btn w-100"
                       onClick={submitData}
                     >
                       Submit

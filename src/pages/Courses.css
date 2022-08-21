@@ -1,6 +1,4 @@
-.course-section-1{
-  margin-top: 5rem;
-}
+
 .course-section-1 .col-3{
   width: 100%;
 }
@@ -35,144 +33,93 @@
   text-align: center;
   margin: 2rem auto;
 }
+.course-section-2 .container{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 
-
-.course-section-2 {
-  margin-top: 5rem;
 }
-.course-section-2 .main-heading {
-  margin: 3rem 0;
-}
-.course-container .sub-heading {
+.course-section-2 .sub-heading {
   font-size: 2rem;
-  margin-bottom: 5rem;
-  color: var(--fancy-color);
+    margin-bottom: 5rem;
+    color: var(--fancy-color);
 }
-.course-section-2 .button-row {
-  margin-top: 10px;
+.course-section-2 .CardsMainDiv{
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
+  flex-flow: row wrap;
 }
-.course-section-2 .button-row:hover {
-  background-color: transparent;
-}
-
-.button-row button {
-  position: relative;
-  justify-content: space-between;
-  margin-inline-start: 1rem;
-  border-radius: 5px;
-}
-.button-row .btn-style1{
-  width: 12rem;
-  height: 4rem;
-  border-radius: 2rem;
-  color: #fff;
-  background-color: var(--primary-color);
-  text-transform: capitalize;
-  font-size: 1.4rem;
-}
-.button-row .btn-style1:hover {
-  border: 0.1rem solid var(--primary-color);
-  background-color: transparent;
-  color: var(--primary-color);
-  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
-}
-.button-row .btn-style2{
-  width: 12rem;
-  height: 4rem;
-  border-radius: 2rem;
-  border: 0.1rem solid var(--primary-color);
-  color: var(--primary-color);
-  background-color: var(--bgcolor);
-  text-transform: capitalize;
-  font-size: 1.4rem;
-}
-
-
-.button-row .btn-style2:hover {
-  background-color: transparent;
-  color: white;
-  background-color: var(--primary-color);
-  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
-}
-
-@media (max-width: 362px){
-.button-row button {
-  margin-top: 20px;
-}
-}
-
-@media (min-width: 992px){
-.course-container .col-lg-4 {
-  flex: 0 0 auto;
-  width: 30% !important;
-  margin: 2.5rem auto;
-}}
-
-.courses-container-subdivP{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.course-section-2 .card{
+  width: 350px;
   border-radius: 10px;
-  margin: 20px 0px;
-  background-color: #fff;
-  padding: 20px;
+  height: auto;
+  padding: 10px;
+  margin: 20px;
+  transition: transform .2s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.courses-container-subdiv:hover {
-  background-color: var(--bgcolor);
-  cursor: pointer;
-}
-.courses-container-subdiv .fontawesome-style {
-text-align: center;
-align-items: center;
-}
-.courses-container-subdiv:hover > .fontawesome-style {
-  background-color: #fff;
-}
-
-.courses-container-subdiv .sub-heading {
-  color: var(--fancy-color);
-}
-.course-description{
-  font-size: 1.5rem;
-    color: var(--text-color);
-    margin: 3rem 0 5rem 0;
-    font-weight: lighter;
-    width: 100%;
-}
-
-.course-section-2 .courses-container-subdiv .fontawesome-style {
+.course-section-2 .card h5{
+  padding-bottom: 10px;
   text-align: left;
-  margin: 2rem 0;
 }
-@media (max-width: 386px) {
-.course-section-2 .button-row {
-  display: block;
-  justify-content: space-between;
+.course-section-2 .card td{
+  padding: 10px;
+}
+.course-section-2 .CardsMainDiv img{
+  width: 100%;
+  border-radius: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.course-section-2 .course-btn1{
+  background-color: var(--primary-color);
+  padding: 8px;
+  width: 40%;
+  border: 1px solid;
+  border-radius: 20px;
+  color: white;
+}
+.course-section-2 .course-btn1:hover{
   background-color: transparent;
+  border: 1px solid;
+  color: var(--primary-color);
 }
+.course-section-2 .course-btn2{
+  background-color: var(--primary-color);
+  padding: 8px;
+  width: 40%;
+  border: 1px solid;
+  border-radius: 20px;
+  color: white;
+}
+.course-section-2 .course-btn2:hover{
+  background-color: transparent;
+  border: 1px solid;
+  color: var(--primary-color);
 }
 
-@media (min-width: 1400px) {
-  .course-container .col-xxl-4 {
-    flex: 0 0 auto;
-    width: 30% !important;
-    margin: auto;
+@media screen and (max-width: 600px){
+  .card{
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+      padding: 10px;
+      margin: 20px;
+      line-height: 5rem;
+  }
+  .card td{
+      background-color: white;
+      padding: 3px;
   }
 }
 
-@media (min-width: 992px) {
-  .course-container .col-lg-4 {
-    flex: 0 0 auto;
-    width: 30% !important;
-    margin: 2.5rem auto;
-  }
-}
 
-@media (max-width: 740px) {
-  .courses-container-subdivP {
-    margin: 20px 15px;
-    padding: 25px;
-  }
+
+@media (max-width: 740px){
+.CardsMainDiv{
+  margin-top: 10rem;
+
+}
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./UseApp.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import headerbg from "../assets/bg-1.jpeg";
+import headerbg from "../assets/bg-2.png";
 import UseAppC from "../components/UseAppC";
 const UseApp = () => {
   return (

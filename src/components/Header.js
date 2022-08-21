@@ -27,7 +27,7 @@ const Header = () => {
     e.preventDefault();
     const { name, email, phone, course, country } = user;
     if (name && email && phone && course && country) {
-      axios.post("/trail", user).then((res) => {
+      axios.post("/signup", user).then((res) => {
         alert(res.data.message);
         history.push("/");
       });
@@ -37,7 +37,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="header-section  ">
+      <header className="header-section">
         <section className="container header-container ">
           <div className="row">
             <div className="col-12 col-lg-6 header-left-side d-flex justify-content-center flex-column align-items-start ">
@@ -49,37 +49,40 @@ const Header = () => {
                 teach others or whether you wish to learn, create an account and
                 begin your journey towards success.
               </p>
-              <h3 className="header-btn-title">Want to know more about us?</h3>
+              <h3 className="header-btn-title">
+                Want to know more, just reach us?
+              </h3>
               <div className="two btn">
                 <button className="btn">
-                  <NavLink
-                    className="btn-style btn-style1 btn-style-border"
-                    to="/aboutus"
+                  <a
+                    href="tel:+923007575666"
+                    className="btn-style1 btn-style-border1"
+                    to="tel:+923007575666"
                   >
-                    About Us
-                  </NavLink>
+                    Call Us
+                  </a>
                 </button>
-                <button className="btn ">
-                  <NavLink
-                    className="btn-style2 btn-style-border"
-                    to="/contact"
+                <button className="btn">
+                  <a
+                    href="https://wa.link/p18hhb"
+                    className=" btn-style2 btn-style-border2"
                   >
-                    Contact Us
-                  </NavLink>
+                    WhatsApp Us
+                  </a>
                 </button>
               </div>
             </div>
 
             {/*  --------------- header right side--------------  */}
             <div className="col-12 col-lg-6 header-right-side ">
-              <form class="row g-3 form-row shadow p-3 mb-5  rounded">
-                <div class="col-12 form-rows">
-                  <label for="inputName" class="form-label">
+              <form className="row g-3 form-row shadow p-3 mb-5  rounded">
+                <div className="col-12 form-rows">
+                  <label for="inputName" className="form-label">
                     Student Name
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     name="name"
                     id="name"
                     placeholder="Enter your name here"
@@ -87,13 +90,13 @@ const Header = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div class="col-12 form-rows">
+                <div className="col-12 form-rows">
                   <label for="inputFName" class="form-label">
                     Email
                   </label>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     name="email"
                     id="email"
                     placeholder="Enter email here"
@@ -101,13 +104,13 @@ const Header = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div class="col-12 form-rows">
-                  <label for="inputNumber" class="form-label">
+                <div className="col-12 form-rows">
+                  <label for="inputNumber" className="form-label">
                     WhatsApp Number
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     name="phone"
                     id="phone"
                     placeholder="Please enter number with country code"
@@ -123,7 +126,7 @@ const Header = () => {
                   <select
                     name="course"
                     id="course"
-                    class="form-select"
+                    className="form-select"
                     value={user.course}
                     onChange={handleChange}
                   >
@@ -136,13 +139,13 @@ const Header = () => {
                     <option>Namaz, Kalma, Dua</option>
                   </select>
                 </div>
-                <div class="col-md-6 form-rows">
-                  <label for="inputCity" class="form-label">
+                <div className="col-md-6 form-rows">
+                  <label for="inputCity" className="form-label">
                     Country
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     name="country"
                     id="country"
                     placeholder="Entry your country name"
@@ -151,10 +154,10 @@ const Header = () => {
                   />
                 </div>
 
-                <div class="col-12 form-rows">
+                <div className="col-md-6 form-rows">
                   <button
                     type="submit"
-                    class="btn-style3 btn-style-border"
+                    className="btn home-register-btn"
                     onClick={Signup}
                   >
                     Get Trial

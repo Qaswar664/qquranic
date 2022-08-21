@@ -9,10 +9,8 @@ const Courses = () => {
     <>
       <section className="courses-section">
         <div className="container course-container justify-content-center">
-          <h1 className="main-heading text-center fw-bold">Our Courses</h1>
-          <h4 className="sub-heading text-center">
-            Choose your desired course
-          </h4>
+          <h1 className="main-heading text-left fw-bold">Our Courses</h1>
+          <h4 className="sub-heading text-left">Choose your desired course</h4>
           <div className="row">
             {serviceData.map((curElem) => {
               const { id, logo, title, info } = curElem;
