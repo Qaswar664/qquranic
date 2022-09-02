@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 import "./PageHeader.css";
 import "./Contact.css";
 import axios from "axios";
@@ -8,14 +10,36 @@ import Footer from "../components/Footer";
 import headerbg from "../assets/bg-2.png";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_pvpjo0s",
+        "template_cwtztg2",
+        form.current,
+        "owYdIWE4hEb1fwUpn"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          var response = result.text;
+        },
+        (error) => {
+          console.log(error.text);
+          var response = error.text;
+        }
+      );
+    e.target.reset();
+  };
+
   const history = useHistory();
   var [response, setresponse] = useState("");
   const [userData, setUserData] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
+    Name: "",
     email: "",
-    address: "",
     message: "",
   });
 
@@ -113,67 +137,44 @@ const Contact = () => {
                 {/* right side contact form  */}
                 <div className="contact-rightside col-12 col-lg-7">
                   <h1>Contact Form:</h1>
-                  <form method="POST">
+                  <form ref={form} onSubmit={sendEmail}>
                     <div className="row">
                       <div className="col-12 col-lg-6 contact-input-feild">
                         <input
                           type="text"
-                          name="firstName"
-                          id="firstName"
+                          name="user_name"
+                          id="Name"
                           className="form-control"
-                          placeholder="First Name"
-                          value={userData.firstName}
-                          onChange={postUserData}
+                          placeholder="Full Name"
+                          required
+                          // value={userData.firstName}
+                          // onChange={postUserData}
                         />
                       </div>
                       <div className="col-12 col-lg-6 contact-input-feild">
                         <input
                           type="text"
-                          name="lastName"
-                          id="lastName"
+                          name="user_email"
+                          id="email"
                           className="form-control"
-                          placeholder="Last Name"
-                          value={userData.lastName}
-                          onChange={postUserData}
+                          placeholder="Your Email"
+                          required
+                          // value={userData.email}
+                          // onChange={postUserData}
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-12 col-lg-6 contact-input-feild">
-                        <input
-                          type="text"
-                          name="phone"
-                          id=""
-                          className="form-control"
-                          placeholder="Phone Number "
-                          value={userData.phone}
-                          onChange={postUserData}
-                        />
-                      </div>
-                      <div className="col-12 col-lg-6 contact-input-feild">
-                        <input
-                          type="text"
-                          name="email"
-                          id=""
-                          className="form-control"
-                          placeholder="Email"
-                          value={userData.email}
-                          onChange={postUserData}
-                        />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12 contact-input-feild">
-                        <input
-                          type="text"
-                          name="address"
-                          id=""
-                          className="form-control"
-                          placeholder="Address"
-                          value={userData.address}
-                          onChange={postUserData}
-                        />
-                      </div>
+                    <div className="col-12 col-lg-6 contact-input-feild">
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        className="form-control"
+                        placeholder="Subject"
+                        required
+                        // value={userData.email}
+                        // onChange={postUserData}
+                      />
                     </div>
 
                     <div className="row">
@@ -186,26 +187,16 @@ const Contact = () => {
                           placeholder="Message"
                           value={userData.message}
                           onChange={postUserData}
+                          required
                         />
                       </div>
                     </div>
-                    <div className="form-check form-checkbox-style">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckChecked"
-                      />
-                      <label className="form-check-label main-hero-para">
-                        I agree that the Q Quranic may contact me at the email
-                        address or phone number I provide.
-                      </label>
-                    </div>
+
                     <h4 className="text-danger text-center">{response}</h4>
                     <button
                       type="submit"
                       className="btn contactP-btn w-100"
-                      onClick={submitData}
+                      // onClick={submitData}
                     >
                       Submit
                     </button>

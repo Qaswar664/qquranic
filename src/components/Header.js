@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import "./Header.css";
 import axios from "../API/axios";
-import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const history = useHistory();
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_uq9l1sm",
+        "template_ojzdcyk",
+        form.current,
+        "owYdIWE4hEb1fwUpn"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
+  const history = useHistory();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -75,7 +97,11 @@ const Header = () => {
 
             {/*  --------------- header right side--------------  */}
             <div className="col-12 col-lg-6 header-right-side ">
-              <form className="row g-3 form-row shadow p-3 mb-5  rounded">
+              <form
+                className="row g-3 form-row shadow p-3 mb-5  rounded"
+                ref={form}
+                onSubmit={sendEmail}
+              >
                 <div className="col-12 form-rows">
                   <label for="inputName" className="form-label">
                     Student Name
@@ -83,11 +109,11 @@ const Header = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="name"
-                    id="name"
-                    placeholder="Enter your name here"
-                    value={user.name}
-                    onChange={handleChange}
+                    name="user_name"
+                    id="user_name"
+                    placeholder="Enter student's name here"
+                    // value={user.name}
+                    // onChange={handleChange}
                   />
                 </div>
                 <div className="col-12 form-rows">
@@ -97,11 +123,11 @@ const Header = () => {
                   <input
                     type="email"
                     className="form-control"
-                    name="email"
-                    id="email"
+                    name="user_email"
+                    id="user_email"
                     placeholder="Enter email here"
-                    value={user.email}
-                    onChange={handleChange}
+                    // value={user.email}
+                    // onChange={handleChange}
                   />
                 </div>
                 <div className="col-12 form-rows">
@@ -111,11 +137,11 @@ const Header = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="phone"
-                    id="phone"
+                    name="user_phone"
+                    id="user_phone"
                     placeholder="Please enter number with country code"
-                    value={user.phone}
-                    onChange={handleChange}
+                    // value={user.phone}
+                    // onChange={handleChange}
                   />
                 </div>
 
@@ -124,11 +150,11 @@ const Header = () => {
                     Course
                   </label>
                   <select
-                    name="course"
-                    id="course"
+                    name="user_course"
+                    id="user_course"
                     className="form-select"
-                    value={user.course}
-                    onChange={handleChange}
+                    // value={user.course}
+                    // onChange={handleChange}
                   >
                     <option selected>Select Course</option>
                     <option>Basic Qaida</option>
@@ -146,11 +172,11 @@ const Header = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="country"
-                    id="country"
+                    name="user_country"
+                    id="user_country"
                     placeholder="Entry your country name"
-                    value={user.country}
-                    onChange={handleChange}
+                    // value={user.country}
+                    // onChange={handleChange}
                   />
                 </div>
 
@@ -158,7 +184,7 @@ const Header = () => {
                   <button
                     type="submit"
                     className="btn home-register-btn"
-                    onClick={Signup}
+                    // onClick={Signup}
                   >
                     Get Trial
                   </button>

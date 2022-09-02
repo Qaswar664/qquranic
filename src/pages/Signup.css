@@ -1,5 +1,9 @@
-
-
+.signup-section{
+  margin-top: 50px;
+}
+.signup-leftside{
+  padding: 10px;
+}
 
 .signup-para{
   color: var(--text-color);

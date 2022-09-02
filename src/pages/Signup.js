@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Signup.css";
 import axios from "../API/axios.js";
 import Navbar from "../components/Navbar";
@@ -8,6 +9,29 @@ import signup from "../assets/signup.webp";
 import validator from "validator";
 
 const Signup = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_uq9l1sm",
+        "template_ojzdcyk",
+        form.current,
+        "owYdIWE4hEb1fwUpn"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -84,54 +108,54 @@ const Signup = () => {
 
                 {/* right side sign up page - contact form  */}
                 <div className="signup-rightside col-12 col-lg-6">
-                  <form method="POST">
+                  <form ref={form} onSubmit={sendEmail}>
                     <div className="row">
                       <h1>Student Registeration Form:</h1>
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <input
                           type="text"
-                          name="name"
-                          id="name"
+                          name="user_name"
+                          id="user_name"
                           className="form-control"
                           autoComplete="off"
-                          placeholder="Name"
-                          value={user.name}
-                          onChange={handleChange}
+                          placeholder="Student Name"
+                          // value={user.name}
+                          // onChange={handleChange}
                         />
                       </div>
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <input
                           type="text"
-                          name="email"
-                          id="email"
+                          name="user_email"
+                          id="user_email"
                           autoComplete="off"
                           className="form-control"
                           placeholder="Email"
-                          value={user.email}
-                          onChange={handleChange}
+                          // value={user.email}
+                          // onChange={handleChange}
                         />
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <input
-                          type="text"
-                          name="phone"
-                          id="phone"
+                          type="number"
+                          name="user_phone"
+                          id="user_phone"
                           autoComplete="off"
                           className="form-control"
                           placeholder="WhatsApp number with country code"
-                          value={user.phone}
-                          onChange={handleChange}
+                          // value={user.phone}
+                          // onChange={handleChange}
                         />
                       </div>
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <select
-                          name="course"
-                          id="course"
+                          name="user_course"
+                          id="user_course"
                           class="form-select "
-                          value={user.course}
-                          onChange={handleChange}
+                          // value={user.course}
+                          // onChange={handleChange}
                         >
                           <option selected>Select Course</option>
                           <option>Basic Qaida</option>
@@ -147,13 +171,13 @@ const Signup = () => {
                       <div className="col-12 col-lg-6 signup-input-feild">
                         <input
                           type="text"
-                          name="country"
-                          id="country"
+                          name="user_country"
+                          id="user_country"
                           autoComplete="off"
                           className="form-control"
-                          placeholder="Country"
-                          value={user.country}
-                          onChange={handleChange}
+                          placeholder="Country you're living in"
+                          // value={user.country}
+                          // onChange={handleChange}
                         />
                       </div>
                     </div>
@@ -161,7 +185,7 @@ const Signup = () => {
                     <button
                       type="submit"
                       className="btn registerP-btn w-100 mt-5"
-                      onClick={submitHandler}
+                      // onClick={submitHandler}
                     >
                       Register
                     </button>

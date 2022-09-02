@@ -1,3 +1,6 @@
+.course-section-1{
+  margin-top: 50px;
+}
 
 .course-section-1 .col-3{
   width: 100%;
@@ -63,11 +66,15 @@
   padding-bottom: 10px;
   text-align: left;
 }
+.course-section-2 .card p{
+  font-size: 15px;
+}
 .course-section-2 .card td{
   padding: 10px;
 }
 .course-section-2 .CardsMainDiv img{
-  width: 100%;
+  width: 90%;
+  height: auto;
   border-radius: 3%;
   margin-left: auto;
   margin-right: auto;

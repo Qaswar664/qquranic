@@ -26,7 +26,7 @@ const ToS = () => {
       {/* page header end */}
       <section className="tos-section">
         <div className="container justify-content-center">
-          <h1 className="main-heading text-center fw-bold">
+          <h1 className="main-heading text-left fw-bold">
             <u>Q Quranic ToS</u>
           </h1>
 
