@@ -1,3 +1,5 @@
+Current running website at www.qquranic.com made by using react 
+
 used bootstrap 5...used css, bundle, separator also
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
 used Navbar component from btstrp 5
