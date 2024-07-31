@@ -1,249 +1,78 @@
-// import React, { useState } from 'react';
-// import "./registerStudentModal.css";
-
-// const RegisterStudentModal = ({ id }) => {
-//     const [currentStep, setCurrentStep] = useState(0);
-//     const [formData, setFormData] = useState({});
-//     const [errors, setErrors] = useState({});
-
-//     const steps = [
-//         {
-//             title: "Sign up as a Student",
-//             fields: [
-//                 { name: "name", placeholder: "Name", type: "text" },
-//                 { name: "email", placeholder: "Email", type: "email" },
-//                 { name: "password", placeholder: "Password", type: "password" },
-//                 { name: "termsAgreed", placeholder: "I have read and agree to the terms of use", type: "checkbox" }
-//             ]
-//         },
-//         {
-//             title: "Help us customize your experience",
-//             subtitle: "Add Timezone",
-//             fields: [
-//                 { name: "studentGender", placeholder: "Gender", type: "text" },
-//                 { name: "country", placeholder: "Country", type: "text" },
-//                 { name: "timeZone", placeholder: "Time Zone", type: "text" },
-//                 { name: "city", placeholder: "City", type: "text" }
-//             ]
-//         },
-//         {
-//             title: "Help us customize your experience",
-//             subtitle: "Add Preferences",
-//             fields: [
-//                 { name: "tutorGender", placeholder: "Tutor Gender Preference", type: "text" },
-//                 { name: "hourlyRate", placeholder: "Hourly Rate", type: "number" },
-//                 { name: "subjects", placeholder: "Subjects", type: "text" }
-//             ]
-//         }
-//     ];
-
-//     const handleChange = (e) => {
-//         const { name, value, type, checked } = e.target;
-//         setFormData({
-//             ...formData,
-//             [name]: type === "checkbox" ? checked : value,
-//         });
-//         if (errors[name]) {
-//             setErrors({
-//                 ...errors,
-//                 [name]: "",
-//             });
-//         }
-//     };
-
-//     const handleNext = () => {
-//         const currentFields = steps[currentStep].fields;
-//         const newErrors = {};
-
-//         currentFields.forEach((field) => {
-//             if (!formData[field.name] || (field.type === 'checkbox' && !formData[field.name])) {
-//                 newErrors[field.name] = `${field.placeholder} is required`;
-//             }
-//         });
-
-//         if (Object.keys(newErrors).length > 0) {
-//             setErrors(newErrors);
-//         } else {
-//             setCurrentStep(currentStep + 1);
-//         }
-//     };
-
-//     const handlePrevious = () => {
-//         if (currentStep > 0) {
-//             setCurrentStep(currentStep - 1);
-//         }
-//     };
-
-//     return (
-//         <div className="modal fade" id="studentModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-//             <div className="modal-dialog modal-dialog-centered">
-//                 <div className="modal-content">
-//                     <div className="modal-header border-0">
-//                         <button type="button" className="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-//                     </div>
-//                     <div className="modal-body">
-//                         <h2 className="fs-title">{steps[currentStep].title}</h2>
-//                         <h3 className="fs-subtitle">{steps[currentStep].subtitle}</h3>
-//                         <form id="msform">
-//                             <fieldset>
-//                                 {steps[currentStep].fields.map((field, index) => (
-//                                     <div key={index} className="mb-4">
-//                                         {field.type === 'checkbox' ? (
-//                                             <div className="form-check d-flex flex-column ">
-//                                                 <div className='d-flex justify-content-start '>
-//                                                     <input
-//                                                         type="checkbox"
-//                                                         name={field.name}
-//                                                         className="form-check-input"
-//                                                         id={field.name}
-//                                                         checked={formData[field.name] || false}
-//                                                         onChange={handleChange}
-//                                                     />
-//                                                     <label className="form-check-label px-4 pt-2" htmlFor={field.name}>
-//                                                         {field.placeholder}
-//                                                     </label>
-//                                                 </div>
-//                                                 <div>
-//                                                     {errors[field.name] && <div className="text-danger text-start">{errors[field.name]}</div>}
-//                                                 </div>
-//                                             </div>
-//                                         ) : (
-//                                             <div>
-//                                                 <input
-//                                                     type={field.type}
-//                                                     name={field.name}
-//                                                     placeholder={field.placeholder}
-//                                                     className="form-control"
-//                                                     value={formData[field.name] || ''}
-//                                                     onChange={handleChange}
-//                                                 />
-//                                                 {errors[field.name] && <div className="text-danger text-start">{errors[field.name]}</div>}
-//                                             </div>
-//                                         )}
-//                                     </div>
-//                                 ))}
-//                                 <div className="button-group d-flex">
-//                                     {currentStep > 0 && (
-//                                         <button type="button" className="btn btn-secondary w-25" onClick={handlePrevious}>Previous</button>
-//                                     )}
-//                                     {currentStep < steps.length - 1 ? (
-//                                         <button type="button" className="btn btn-success w-25 mx-4" onClick={handleNext}>Next</button>
-//                                     ) : (
-//                                         <button type="submit" className="btn btn-success w-25 mx-4">Submit</button>
-//                                     )}
-//                                 </div>
-//                             </fieldset>
-//                         </form>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default RegisterStudentModal;
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
-import Joi from 'joi';
-import "./registerStudentModal.css";
+import { Form, Button, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
 
 const RegisterStudentModal = ({ id }) => {
-    const [currentStep, setCurrentStep] = useState(0);
-    const [formData, setFormData] = useState({});
-    const [errors, setErrors] = useState({});
-
-    const steps = [
-        {
-            title: "Sign up as a Student",
-            fields: [
-                { name: "name", placeholder: "Name", type: "text" },
-                { name: "email", placeholder: "Email", type: "email" },
-                { name: "password", placeholder: "Password", type: "password" },
-                { name: "termsAgreed", placeholder: "I have read and agree to the terms of use", type: "checkbox" }
-            ]
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        gender: '',
+        country: '',
+        timeZone: '',
+        city: '',
+        tutorGender: '',
+        hourlyRate: '',
+        subjects: {
+            english: false,
+            urdu: false,
+            math: false,
+            physics: false,
         },
-        {
-            title: "Help us customize your experience",
-            subtitle: "Add Timezone",
-            fields: [
-                { name: "studentGender", placeholder: "Gender", type: "text" },
-                { name: "country", placeholder: "Country", type: "text" },
-                { name: "timeZone", placeholder: "Time Zone", type: "text" },
-                { name: "city", placeholder: "City", type: "text" }
-            ]
-        },
-        {
-            title: "Help us customize your experience",
-            subtitle: "Add Preferences",
-            fields: [
-                { name: "tutorGender", placeholder: "Tutor Gender Preference", type: "text" },
-                { name: "hourlyRate", placeholder: "Hourly Rate", type: "number" },
-                { name: "subjects", placeholder: "Subjects", type: "text" }
-            ]
-        }
-    ];
-
-    const signUpEmailValidation = Joi.object({
-        name: Joi.string().min(3).max(50).required(),
-        email: Joi.string().email({ tlds: { allow: false } }).required(),
-        password: Joi.string().min(6).max(20).required(),
-        termsAgreed: Joi.boolean().required()
     });
+
+    const [validated, setValidated] = useState(false);
+    const [step, setStep] = useState(1);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setFormData({
-            ...formData,
-            [name]: type === "checkbox" ? checked : value,
-        });
-        if (errors[name]) {
-            setErrors({
-                ...errors,
-                [name]: "",
+        if (type === 'checkbox') {
+            setFormData({
+                ...formData,
+                subjects: { ...formData.subjects, [name]: checked },
             });
+        } else {
+            setFormData({ ...formData, [name]: value });
         }
     };
 
-    const validateCurrentStep = () => {
-        const currentFields = steps[currentStep].fields.map(field => field.name);
-        const schema = signUpEmailValidation.fork(currentFields, (schema) => schema);
-        const { error } = schema.validate(formData, { abortEarly: false });
-        if (error) {
-            const newErrors = {};
-            error.details.forEach(detail => {
-                newErrors[detail.path[0]] = detail.message;
-            });
-            setErrors(newErrors);
-            return false;
+    const handleNextStep = async () => {
+        if (step === 1) {
+            try {
+                const response = await axios.post('http://localhost:8000/api/v1/register', {
+                    name: formData.name,
+                    email: formData.email,
+                    password: formData.password,
+                    gender: formData.gender,
+                    role:"Student",
+                    city: formData.city,
+                });
+                if (response.status === 200) {
+                    setStep(step + 1);
+                }
+            } catch (error) {
+                console.error('There was an error!', error);
+            }
+        } else {
+            setStep(step + 1);
         }
-        return true;
     };
 
-    const handleNext = () => {
-        if (validateCurrentStep()) {
-            setCurrentStep(currentStep + 1);
-        }
-    };
-
-    const handlePrevious = () => {
-        if (currentStep > 0) {
-            setCurrentStep(currentStep - 1);
-        }
+    const handlePrevStep = () => {
+        setStep(step - 1);
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validateCurrentStep()) {
-            // Perform the final submission logic here
-            console.log('Form submitted', formData);
+        const form = e.currentTarget;
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        } else {
+            e.preventDefault();
+            console.log(formData);
         }
+
+        setValidated(true);
     };
 
     return (
@@ -251,61 +80,224 @@ const RegisterStudentModal = ({ id }) => {
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header border-0">
-                        <button type="button" className="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" className="btn-close px-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div className="modal-body">
-                        <h2 className="fs-title">{steps[currentStep].title}</h2>
-                        <h3 className="fs-subtitle">{steps[currentStep].subtitle}</h3>
-                        <form id="msform" onSubmit={handleSubmit}>
-                            <fieldset>
-                                {steps[currentStep].fields.map((field, index) => (
-                                    <div key={index} className="mb-4">
-                                        {field.type === 'checkbox' ? (
-                                            <div className="form-check d-flex flex-column">
-                                                <div className='d-flex justify-content-start'>
-                                                    <input
-                                                        type="checkbox"
-                                                        name={field.name}
-                                                        className="form-check-input"
-                                                        id={field.name}
-                                                        checked={formData[field.name] || false}
-                                                        onChange={handleChange}
-                                                    />
-                                                    <label className="form-check-label px-4 pt-2" htmlFor={field.name}>
-                                                        {field.placeholder}
-                                                    </label>
-                                                </div>
-                                                <div>
-                                                    {errors[field.name] && <div className="text-danger text-start">{errors[field.name]}</div>}
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <div>
-                                                <input
-                                                    type={field.type}
-                                                    name={field.name}
-                                                    placeholder={field.placeholder}
-                                                    className="form-control"
-                                                    value={formData[field.name] || ''}
-                                                    onChange={handleChange}
-                                                />
-                                                {errors[field.name] && <div className="text-danger text-start">{errors[field.name]}</div>}
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                                <div className="button-group d-flex">
-                                    {currentStep > 0 && (
-                                        <button type="button" className="btn btn-secondary w-25" onClick={handlePrevious}>Previous</button>
-                                    )}
-                                    {currentStep < steps.length - 1 ? (
-                                        <button type="button" className="btn btn-success w-25 mx-4" onClick={handleNext}>Next</button>
-                                    ) : (
-                                        <button type="submit" className="btn btn-success w-25 mx-4">Submit</button>
-                                    )}
-                                </div>
-                            </fieldset>
-                        </form>
+                    <div className="modal-body px-5">
+                        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                            {step === 1 && (
+                                <>
+                                    <Form.Group controlId="formName">
+                                        <Form.Label>Name</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Enter name"
+                                            name="name"
+                                            className='my-2'
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a name.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formEmail">
+                                        <Form.Label>Email</Form.Label>
+                                        <Form.Control
+                                            type="email"
+                                            placeholder="Enter email"
+                                            name="email"
+                                            className='my-2'
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a valid email.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formPassword">
+                                        <Form.Label>Password</Form.Label>
+                                        <Form.Control
+                                            type="password"
+                                            placeholder="Enter password"
+                                            name="password"
+                                            className='my-2'
+                                            value={formData.password}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a password.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formGender">
+                                        <Form.Label>Gender</Form.Label>
+                                        <Form.Select
+                                            aria-label="Select gender"
+                                            name="gender"
+                                            className='my-2'
+                                            value={formData.gender}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="" disabled hidden>Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </Form.Select>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please select a gender.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+                                    <Form.Group controlId="formCity">
+                                        <Form.Label>City</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Enter city"
+                                            name="city"
+                                            className='my-2'
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a city.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Button className='my-4 p-3 w-25 tutor-btn' onClick={handleNextStep}>
+                                        Next
+                                    </Button>
+                                </>
+                            )}
+
+                            {step === 2 && (
+                                <>
+                                    <Form.Group controlId="formCountry">
+                                        <Form.Label>Country</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Enter country"
+                                            name="country"
+                                            className='my-2'
+                                            value={formData.country}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a country.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formTimeZone">
+                                        <Form.Label>Time Zone</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            placeholder="Enter time zone"
+                                            name="timeZone"
+                                            className='my-2'
+                                            value={formData.timeZone}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a time zone.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formTutorGender">
+                                        <Form.Label>Tutor Gender</Form.Label>
+                                        <Form.Select
+                                            aria-label="Select tutor gender"
+                                            name="tutorGender"
+                                            className='my-2'
+                                            value={formData.tutorGender}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="" disabled hidden>
+                                                Select tutor gender
+                                            </option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="either">Either</option>
+                                        </Form.Select>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please select a tutor gender.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formHourlyRate">
+                                        <Form.Label>Hourly Rate</Form.Label>
+                                        <Form.Select
+                                            aria-label="Select hourly rate"
+                                            name="hourlyRate"
+                                            className='my-2'
+                                            value={formData.hourlyRate}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="" disabled hidden>Select hourly rate</option>
+                                            <option value="3-5">$3-5</option>
+                                            <option value="5-10">$5-10</option>
+                                            <option value="10+">$10+</option>
+                                        </Form.Select>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please select an hourly rate.
+                                        </Form.Control.Feedback>
+                                    </Form.Group>
+
+                                    <Form.Group className='mb-3'>
+                                        <Form.Label className='mb-2'>Subjects</Form.Label>
+                                        <div className='d-flex align-items-center gap-3'>
+                                            <Form.Check
+                                                type="checkbox"
+                                                label="English"
+                                                name="english"
+                                                className='mx-2 d-flex align-items-center gap-3'
+                                                checked={formData.subjects.english}
+                                                onChange={handleChange}
+                                            />
+                                            <Form.Check
+                                                type="checkbox"
+                                                label="Urdu"
+                                                name="urdu"
+                                                className='mx-2 d-flex align-items-center gap-3'
+                                                checked={formData.subjects.urdu}
+                                                onChange={handleChange}
+                                            />
+                                            <Form.Check
+                                                type="checkbox"
+                                                label="Math"
+                                                name="math"
+                                                className='mx-2 d-flex align-items-center gap-3'
+                                                checked={formData.subjects.math}
+                                                onChange={handleChange}
+                                            />
+                                            <Form.Check
+                                                type="checkbox"
+                                                label="Physics"
+                                                name="physics"
+                                                className='mx-2 d-flex align-items-center gap-3'
+                                                checked={formData.subjects.physics}
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                    </Form.Group>
+
+                                    <Button variant="secondary" className='my-2 p-3 w-25' onClick={handlePrevStep}>
+                                        Previous
+                                    </Button>
+                                    <Button type="submit" className="tutor-btn ms-2 my-2 p-3 w-25">
+                                        Submit
+                                    </Button>
+                                </>
+                            )}
+                        </Form>
                     </div>
                 </div>
             </div>
