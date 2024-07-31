@@ -17,6 +17,8 @@ import WhyUS from "./pages/WhyUs";
 import UseApp from "./pages/UseApp";
 import Signup from "./pages/Signup";
 import Error from "./pages/Error";
+import { ToastContainer} from 'react-toastify';
+
 
 import { initialState, reducer } from "./reducer/UseReducer";
 // 1 context api
@@ -47,6 +49,7 @@ const App = () => {
           <Route component={Error}></Route>
         </Switch>
       </UserContext.Provider>
+      <ToastContainer/>
     </>
   );
 };
