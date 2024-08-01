@@ -1,6 +1,5 @@
-
 // src/pages/Signup.js
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import RegisterStudentModal from "../components/modals/registerStudentModal";
@@ -10,6 +9,13 @@ import free_trail from "../assets/free_trail.png";
 import "./Signup.css";
 
 const Signup = () => {
+  const [registerStudentModal, setRegisterStudentModal] = useState(false);
+  const showStudentModal = () => {
+    setRegisterStudentModal(true);
+  };
+  const hideStudentModal = () => {
+    setRegisterStudentModal(false);
+  };
   return (
     <>
       <Navbar />
@@ -60,9 +66,7 @@ const Signup = () => {
                   <div className="row">
                     <div className="col-12">
                       <button
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#studentModal"
+                        onClick={showStudentModal}
                         className="btn tutor-btn w-100 mb-4 p-3"
                       >
                         Sign up as a Student
@@ -74,7 +78,10 @@ const Signup = () => {
                       </button>
                     </div>
                   </div>
-                  <RegisterStudentModal />
+                  <RegisterStudentModal
+                    show={registerStudentModal}
+                    hide={hideStudentModal}
+                  />
                 </div>
               </div>
             </div>
