@@ -17,19 +17,31 @@ import WhyUS from "./pages/WhyUs";
 import UseApp from "./pages/UseApp";
 import Signup from "./pages/Signup";
 import Error from "./pages/Error";
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 import { initialState, reducer } from "./reducer/UseReducer";
+import PrivateRoute from "./routes/PrivateRoutes";
+import ProtectedRoutes from "./routes/ProtectedRoutes";
 // 1 context api
 export const UserContext = createContext();
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  // const isAuthenticated = getToken();
+
   return (
     <>
       <UserContext.Provider value={{ state, dispatch }}>
         <Switch>
+          <PrivateRoute
+            // path="/"
+            // isAuthenticated={isAuthenticated}
+          >
+            <ProtectedRoutes />
+          </PrivateRoute>
           <Route exact path="/" component={Home}></Route>
           <Route path="/findtutors" component={FindTutor}></Route>
           <Route path="/priceplan" component={PricePlan}></Route>
@@ -49,7 +61,7 @@ const App = () => {
           <Route component={Error}></Route>
         </Switch>
       </UserContext.Provider>
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 };

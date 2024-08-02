@@ -8,7 +8,6 @@ import StudentEmailVerificationModal from "./StudentEmailVerificationModal";
 const RegisterStudentModal = ({ show, hide }) => {
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
-
   const [validated, setValidated] = useState(false);
   const [step, setStep] = useState(1);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
@@ -47,7 +46,6 @@ const RegisterStudentModal = ({ show, hide }) => {
   const handleNextStep = async (e) => {
     const form = e.currentTarget;
     e.preventDefault();
-
     if (form.checkValidity() === false) {
       e.stopPropagation();
       setValidated(true);
@@ -182,7 +180,7 @@ const RegisterStudentModal = ({ show, hide }) => {
                     id="termsAgreed"
                     label="I have read and agree to the terms of use"
                     name="termsAgreed"
-                    className="mx-2 d-flex align-items-center gap-3"
+                    className="mx-2 p-3 d-flex align-items-center gap-3"
                     checked={formData.termsAgreed}
                     onChange={handleChange}
                     required
@@ -338,7 +336,7 @@ const RegisterStudentModal = ({ show, hide }) => {
                       label="Recitation"
                       name="subjects"
                       value="Recitation"
-                      className="mx-2 d-flex align-items-center gap-3"
+                      className="mx-2 p-3 d-flex align-items-center gap-3"
                       checked={formData.subjects.includes("Recitation")}
                       onChange={handleChange}
                     />
@@ -347,7 +345,7 @@ const RegisterStudentModal = ({ show, hide }) => {
                       label="Tajweed"
                       name="subjects"
                       value="Tajweed"
-                      className="mx-2 d-flex align-items-center gap-3"
+                      className="mx-2 p-3 d-flex align-items-center gap-3"
                       checked={formData.subjects.includes("Tajweed")}
                       onChange={handleChange}
                     />
@@ -356,7 +354,7 @@ const RegisterStudentModal = ({ show, hide }) => {
                       label="Translation"
                       name="subjects"
                       value="Translation"
-                      className="mx-2 d-flex align-items-center gap-3"
+                      className="mx-2 p-3 d-flex align-items-center gap-3"
                       checked={formData.subjects.includes("Translation")}
                       onChange={handleChange}
                     />
@@ -365,7 +363,7 @@ const RegisterStudentModal = ({ show, hide }) => {
                       label="Fiqh"
                       name="subjects"
                       value="Fiqh"
-                      className="mx-2 d-flex align-items-center gap-3"
+                      className="mx-2 p-3 d-flex align-items-center gap-3"
                       checked={formData.subjects.includes("Fiqh")}
                       onChange={handleChange}
                     />
