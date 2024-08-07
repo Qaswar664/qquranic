@@ -102,6 +102,9 @@ const RegisterStudentModal = ({ show, hide }) => {
         );
 
         if (response.status === 200) {
+          const { token, role } = response.data;
+          localStorage.setItem("token", token);
+          localStorage.setItem("role", role);
           setEmail(response.data.email);
           setCode(response.data.verificationCode);
 

@@ -4,12 +4,13 @@ import { Modal, Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 import axios from "axios";
 import VerificationInput from "react-verification-input";
-
+import { useHistory } from "react-router-dom";
 
 const StudentEmailVerificationModal = ({ show, onHide }) => {
+  const history = useHistory();
   const [code, setCode] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const role = localStorage.getItem("role");
   const handleCodeChange = (value) => {
     setCode(value);
   };
@@ -23,7 +24,17 @@ const StudentEmailVerificationModal = ({ show, onHide }) => {
       );
       if (response.status === 200) {
         toast.success("Email verified successfully!");
-        onHide(); 
+        onHide();
+        // Redirect based on user role
+        if (role === "student") {
+          history.push("/students/dashboard");
+        } else if (role === "teacher") {
+          history.push("/tutor-dashboard");
+        } else if (role === "admin") {
+          history.push("/admin-dashboard");
+        } else {
+          history.push("/signup"); 
+        }
       } else {
         toast.error("Invalid verification code.");
       }
