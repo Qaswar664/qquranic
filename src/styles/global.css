@@ -1,4 +1,7 @@
-.student-dashboard-logo{
-    width: 100px;
-    height: 60px;
+.student-dashboard-logo {
+  width: 100px;
+  height: 60px;
+}
+.cursor-pointer {
+  cursor: pointer;
 }

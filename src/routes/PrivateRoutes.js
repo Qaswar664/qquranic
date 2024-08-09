@@ -59,7 +59,7 @@ const PrivateRoutes = () => {
       />
       {/* Define private routes with access control */}
       <PrivateRoute
-        path="/student-dashboard"
+        path="/students/dashboard"
         component={StudentDashboard}
         roles={['student']}
       />
@@ -68,11 +68,11 @@ const PrivateRoutes = () => {
         component={EditProfile}
         roles={['student']}
       />
-       <PrivateRoute
+       {/* <PrivateRoute
         path="/students/dashboard"
         component={Dashboard}
         roles={['student']}
-      />
+      /> */}
        <PrivateRoute
         path="/students/parental_watch"
         component={ParentalWatch}

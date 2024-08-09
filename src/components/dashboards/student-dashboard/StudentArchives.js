@@ -11,7 +11,10 @@ const StudentArchives = () => {
           <StudentSidebar />
         </Col>
         <Col md={9} className="content-col">
-          Parental Watch
+          <p className="text-center p-5 fs-3">
+            Video logs will appear here when you create archive recordings
+            during a classroom session.
+          </p>
         </Col>
       </Row>
     </>
